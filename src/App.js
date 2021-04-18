@@ -12,6 +12,10 @@ import {FunctionClick} from './functional_components/handling_events/FunctionCli
 import {FunctionClickClassComponent} from './class_componenets/FunctionClick';
 import {EventBind} from './class_componenets/EventBind';
 import {ContainerComponent} from  './class_componenets/ContainerComponent';
+import { UserGreeting } from './class_componenets/UserGreeting';
+import { NameList } from './functional_components/NameList';
+import { StyleSheet } from './functional_components/using_css/StyleSheet';
+import { UsingForm } from './class_componenets/UsingForm';
 
 class App extends React.Component {
   // Props vs State
@@ -52,6 +56,18 @@ class App extends React.Component {
         <hr />
         {/* passing methods as props */}
         <ContainerComponent />
+        <hr />
+        {/* conditional rendering */}
+        <UserGreeting />
+        <hr />
+        {/* list rendering */}
+        <NameList />
+        <hr />
+        {/* styling and css basics */}
+        <StyleSheet primary={true} />
+        <hr />
+        {/* basics of form handling */}
+        <UsingForm />
       </div>
     );
   }
