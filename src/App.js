@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from "./logo.svg";
+// import logo from "./logo.svg";
 import "./App.css";
 import {Greet} from './functional_components/Greet';
 import {GreetAnother} from './class_componenets/Greet';
@@ -16,6 +16,10 @@ import { UserGreeting } from './class_componenets/UserGreeting';
 import { NameList } from './functional_components/NameList';
 import { StyleSheet } from './functional_components/using_css/StyleSheet';
 import { UsingForm } from './class_componenets/UsingForm';
+import { LifecycleMethods } from './class_componenets/understandingLifecycles/LifecycleMethods';
+import { FragmentDemo } from './functional_components/understanding_fragments/FragmentDemo';
+// import { PureComp } from './class_componenets/pureComponents/PureComponent';
+import {ContainerComp} from './class_componenets/pureComponents/ContainerComponent';
 
 class App extends React.Component {
   // Props vs State
@@ -68,6 +72,16 @@ class App extends React.Component {
         <hr />
         {/* basics of form handling */}
         <UsingForm />
+        <hr />
+        {/* understanding lifecycle */}
+        <LifecycleMethods />
+        <hr />
+        {/* understanding Fragments */}
+        <FragmentDemo />
+        <hr />
+        {/* Pure Component */}
+        {/* <PureComp /> */}
+        <ContainerComp />
       </div>
     );
   }
