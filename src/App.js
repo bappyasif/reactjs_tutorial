@@ -20,6 +20,16 @@ import { LifecycleMethods } from './class_componenets/understandingLifecycles/Li
 import { FragmentDemo } from './functional_components/understanding_fragments/FragmentDemo';
 // import { PureComp } from './class_componenets/pureComponents/PureComponent';
 import {ContainerComp} from './class_componenets/pureComponents/ContainerComponent';
+import { RefsDemo } from './class_componenets/understandingRefs/RefsDemo';
+import { RefsDemoWithCallback } from './class_componenets/understandingRefs/RefsDemoWithCallback';
+// import { RefsWithClassComponent } from './class_componenets/understandingRefs/RefsWithClassComponent';
+import { FocusInput } from './class_componenets/understandingRefs/FocusInput';
+import { ForwardRefContainerComponent } from './class_componenets/understandingRefs/ForwardRefContainerComponent';
+import { PortalDemo } from './functional_components/PortalDemo';
+import { HandlingError } from './class_componenets/understanding_errorBounaries/HandlingError';
+// import { ClickCounter } from './class_componenets/understandingHigherOrderComponent/ClickCounter';
+// import { HoverCounter } from './class_componenets/understandingHigherOrderComponent/HoverCounter';
+import { HigherOrderComponentContainer } from './class_componenets/understandingHigherOrderComponent/HigherOrderComponentContainer';
 
 class App extends React.Component {
   // Props vs State
@@ -82,6 +92,27 @@ class App extends React.Component {
         {/* Pure Component */}
         {/* <PureComp /> */}
         <ContainerComp />
+        <hr />
+        {/* using Refs */}
+        <RefsDemo />
+        <RefsDemoWithCallback />
+        <br />
+        {/* <RefsWithClassComponent /> */}
+        <FocusInput />
+        <br />
+        <ForwardRefContainerComponent />
+        <hr />
+        {/* using portals */}
+        <PortalDemo />
+        <hr />
+        {/* App Error handling phase */}
+        <HandlingError />
+        <hr />
+        {/* using higher order component */}
+        {/* we can see both of these compoenent are using repeating code for coiunter we counl d lift that count state to container and then pass it as props to child components but if we had a nested stuctures than it would be errorneous so we need to have  use of Higher Order Components so that we can dispatch rather than pass it along children */}
+        {/* <ClickCounter />
+        <HoverCounter /> */}
+        <HigherOrderComponentContainer />
       </div>
     );
   }
