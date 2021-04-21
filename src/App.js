@@ -30,6 +30,9 @@ import { HandlingError } from './class_componenets/understanding_errorBounaries/
 // import { ClickCounter } from './class_componenets/understandingHigherOrderComponent/ClickCounter';
 // import { HoverCounter } from './class_componenets/understandingHigherOrderComponent/HoverCounter';
 import { HigherOrderComponentContainer } from './class_componenets/understandingHigherOrderComponent/HigherOrderComponentContainer';
+import { RenderPropsContainerComponent } from './class_componenets/renderProps/RenderPropsContainerComponent';
+import { ContextContainer } from './class_componenets/understandingContext/ContextContainer';
+import { HttpRequestContainerComponent } from './class_componenets/usingHTTP/HttpRequestContainerComponent';
 
 class App extends React.Component {
   // Props vs State
@@ -113,6 +116,19 @@ class App extends React.Component {
         {/* <ClickCounter />
         <HoverCounter /> */}
         <HigherOrderComponentContainer />
+        <hr />
+        {/* Rendering Props */}
+        {/* <ClickCounterRenderingProps />
+        <HoverCounterRenderingProps />
+        <UserComponent /> */}
+        <RenderPropsContainerComponent />
+        <hr />
+        {/* Understanding Context, Context API */}
+        {/* Context provides a way to pass data through component tree without having to pass props down manually at every level */}
+        <ContextContainer />
+        <hr />
+        {/* Http Requests In React */}
+        <HttpRequestContainerComponent />
       </div>
     );
   }
