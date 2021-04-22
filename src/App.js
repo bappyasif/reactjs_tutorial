@@ -33,6 +33,12 @@ import { HigherOrderComponentContainer } from './class_componenets/understanding
 import { RenderPropsContainerComponent } from './class_componenets/renderProps/RenderPropsContainerComponent';
 import { ContextContainer } from './class_componenets/understandingContext/ContextContainer';
 import { HttpRequestContainerComponent } from './class_componenets/usingHTTP/HttpRequestContainerComponent';
+// import { StateHookCounterExample } from './functional_components/react_hooks/StateHookCounterExample';
+// import { HookCounterBasedOnPreviousValue } from './functional_components/react_hooks/using_useState/HookCounterBasedOnPreviousValue';
+// import { StateHookWithObject } from './functional_components/react_hooks/StateHookWithObject';
+// import { StateHookWithArray } from './functional_components/react_hooks/StateHookWithArray';
+import { UseStateHookContainer } from './functional_components/react_hooks/using_useState/UseStateHookContainer';
+import { UseEffectHookContainer } from './functional_components/react_hooks/using_useEffect/UseEffectHookContainer';
 
 class App extends React.Component {
   // Props vs State
@@ -129,6 +135,22 @@ class App extends React.Component {
         <hr />
         {/* Http Requests In React */}
         <HttpRequestContainerComponent />
+        <hr />
+        <br />
+
+        {/* React Hooks */}
+        {/* hooks which allows us to use React features without have to write a class component, such as state of an compoennt, hooks dont work inside class components though, only used in functional components */}
+        {/* Reasons for using Hooks */}
+        {/* 1> we don't have to worry about 'this' keyword as we wont be nusing class component while using hooks, whichj means no more event handler binding is required as well, class components don't minify quite well, and makes hot reloading often unreliable */}
+        {/* 2> class components had no specific way to reuse stateful component logic, HOC and Props rendering patterns is used to address that problem, which makes code harder follow and component restructuring to make it work, so there is a need to share stateful logic in a better way than it is in class components currently */}
+        {/* 3> components for datat fetching and evenbt subscribing related code is not organized in one place, different lifecycle methods are responsible for different aspect of them, fetch works in componentDidMount and componentDidUpdate, and event listeners are to componentDidMount and componentWillUnmount, as stateful logic can not break components into smaller ones, hooks helps us to code it in a different related components than in scattered lifecycles within class componenst  */}
+        {/* 4> hooks dont replace our existing knowledge of React concepts, instead, hooks provide a more direct API to React concept we already know, to makes our code much more readble in complex scenarios more easily and confidently */}
+        
+        {/* using useState */}
+        <UseStateHookContainer />
+        <hr/>
+        {/* Using useEffect */}
+        <UseEffectHookContainer />
       </div>
     );
   }
