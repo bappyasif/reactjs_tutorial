@@ -9,6 +9,14 @@ export function RunEffectsOnlyOnce() {
     useEffect(() => {
         console.log('useEffect called');
         window.addEventListener('mousemove', logMouseCurrentPosition);
+
+        // to unmount a component and it's event listener
+        // return () => {
+        //     console.log('runs once unmounting component');
+        //     window.removeEventListener('mousemove', logMouseCurrentPosition);
+        // }
+
+        // passing in an empty array means just run once
     }, []);
 
     let logMouseCurrentPosition = (evt) => {
