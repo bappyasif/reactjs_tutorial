@@ -57,10 +57,10 @@ export function FetchingData() {
     axios
       .get(url)
       .then((res) => {
-        console.log("data:", res.data.data);
+        console.log("data2:", res.data.data);
         // setTexts(texts.push(res.data.data));
         setText2(res.data.data);
-        console.log("state:", text);
+        console.log("state2:", text);
       })
       .catch((err) => console.log(err));
     // we are rendering DOM based on change of valueFromButtonClick state variable
@@ -90,11 +90,18 @@ export function FetchingData() {
 
       <br />
       <span>text on input change</span>
-      <p>{text[0].title}</p>
-
+      {/* <p>{text.title || text[0].title}</p> */}
+      {/* <p>{text[0].title || text.title}</p> */}
+      {/* <p>{text[1].title || text[0].title}</p> */}
+      <p>{text.title}</p>
+      {/* <p>{text[0].title}</p> */}
+      {/* {text[0].title} */}
       <br />
       <span>text on button click</span>
-      <p>{text2[0].title}</p>
+      {/* <p>{text2[0].title || text2.title}</p> */}
+      {/* <p>{text2.title || text2[0].title}</p> */}
+      <p>{text2.title}</p>
+      {/* <p>{text2[0].title}</p> */}
     </div>
   );
 }

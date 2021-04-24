@@ -39,6 +39,8 @@ import { HttpRequestContainerComponent } from './class_componenets/usingHTTP/Htt
 // import { StateHookWithArray } from './functional_components/react_hooks/StateHookWithArray';
 import { UseStateHookContainer } from './functional_components/react_hooks/using_useState/UseStateHookContainer';
 import { UseEffectHookContainer } from './functional_components/react_hooks/using_useEffect/UseEffectHookContainer';
+import { ContainerForUseContext } from './functional_components/react_hooks/using_context/ContainerForUseContext';
+import { ContainerForUseReducer } from './functional_components/react_hooks/using_useReducer/ContainerForUseReducer';
 
 class App extends React.Component {
   // Props vs State
@@ -151,6 +153,14 @@ class App extends React.Component {
         <hr/>
         {/* Using useEffect */}
         <UseEffectHookContainer />
+        <hr />
+        {/* using context with hooks */}
+        <p>using context with hooks</p>
+        <ContainerForUseContext />
+        <hr />
+        {/* using useReducer */}
+        <p>using useReducer</p>
+        <ContainerForUseReducer />
       </div>
     );
   }
