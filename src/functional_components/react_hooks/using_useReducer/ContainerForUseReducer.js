@@ -5,6 +5,7 @@ import { CounterDemo } from "./CounterDemo";
 import { CounterDemoVersionFour } from "./CounterDemoVersionFour";
 import { CounterDemoVersionThree } from "./CounterDemoVersionThree";
 import { CounterDemoVersionTwo } from "./CounterDemoVersionTwo";
+import { ContainerForDataFetching } from "./data_fetching/ContainerForDataFetching";
 
 
 // useReducer hook is used for 'state' management, an alternative approach to useState
@@ -38,6 +39,10 @@ export function ContainerForUseReducer() {
         <br />
         <h2>another useReducer with useContext to share state variable value and dispatch action among component trees in different levels</h2>
         <AnotherComponentContextsContainer />
+        <br />
+        <p>Data Fetching using useReducer</p>
+        {/* first demonstration using useState and useEffect before using useReducer to do just tht same and compare and contrast */}
+        <ContainerForDataFetching />
       </div>
     </div>
   );

@@ -41,6 +41,7 @@ import { UseStateHookContainer } from './functional_components/react_hooks/using
 import { UseEffectHookContainer } from './functional_components/react_hooks/using_useEffect/UseEffectHookContainer';
 import { ContainerForUseContext } from './functional_components/react_hooks/using_context/ContainerForUseContext';
 import { ContainerForUseReducer } from './functional_components/react_hooks/using_useReducer/ContainerForUseReducer';
+import { CallbackHookExampleContainer } from './functional_components/react_hooks/using_useCallback/CallbackHookExampleContainer';
 
 class App extends React.Component {
   // Props vs State
@@ -161,6 +162,11 @@ class App extends React.Component {
         {/* using useReducer */}
         <p>using useReducer</p>
         <ContainerForUseReducer />
+        <hr />
+        
+        {/* useCallback hook */}
+        <p>using useCallback</p>
+        <CallbackHookExampleContainer />
       </div>
     );
   }
