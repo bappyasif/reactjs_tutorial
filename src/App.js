@@ -42,6 +42,9 @@ import { UseEffectHookContainer } from './functional_components/react_hooks/usin
 import { ContainerForUseContext } from './functional_components/react_hooks/using_context/ContainerForUseContext';
 import { ContainerForUseReducer } from './functional_components/react_hooks/using_useReducer/ContainerForUseReducer';
 import { CallbackHookExampleContainer } from './functional_components/react_hooks/using_useCallback/CallbackHookExampleContainer';
+import { ContainerForUseMemo } from './functional_components/react_hooks/using_useMemo/ContainerForUseMemo';
+import { ContainerForUseRef } from './functional_components/react_hooks/using_useRef/ContainerForUseRef';
+import { ContainerForCustomHooks } from './functional_components/react_hooks/custom_hooks/ContainerForCustomHooks';
 
 class App extends React.Component {
   // Props vs State
@@ -165,8 +168,23 @@ class App extends React.Component {
         <hr />
         
         {/* useCallback hook */}
-        <p>using useCallback</p>
+        <p>using useCallback for optimization</p>
         <CallbackHookExampleContainer />
+        <hr />
+
+        {/* useMemo hook */}
+        <p>using useMemo for optimization</p>
+        <ContainerForUseMemo />
+        <hr />
+
+        {/* useRef hook */}
+        <p>using useRef for Accessing</p>
+        <ContainerForUseRef />
+        <hr />
+
+        {/* custom hooks */}
+        <p>Custom Hooks</p>
+        <ContainerForCustomHooks />
       </div>
     );
   }
